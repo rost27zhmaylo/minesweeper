@@ -1,0 +1,55 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 756px;
+    
+}
+
+body, .root-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+/* #region game modes container */
+.game-modes-container {
+    perspective: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-modes-container button {
+    border: 0;
+    background: #7d7a70;
+    width: 100px;
+    height: 30px;
+    font-family: 'Train One';
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: 0.3s;
+    transform: translateY(85%);
+}
+
+.game-modes-container button:hover {
+    transform: translateY(0%);
+    box-shadow: blue 0 0 10px 5px;
+    padding-left: auto;
+}
+/* #endregion */
+
+.game-container {
+    background-color: #a39e90;
+    width: 756px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: #63625d 10px 10px 10px 10px;
+    z-index: 1;
+}
+
