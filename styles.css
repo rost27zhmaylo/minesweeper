@@ -67,9 +67,7 @@ body, .root-container {
     z-index: 1;
 }
 
-
 .field-button {
-    position: relative;
     width: 24px;
     height: 24px;
     background-color: #c6c6c6;
@@ -96,9 +94,6 @@ body, .root-container {
     font-weight: bold;
     height: 24px;
     width: 24px;
-    position: absolute;
-    top: -4px;
-    left: -1px;
 }
 
 .field-button.mine.red {
