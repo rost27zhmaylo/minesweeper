@@ -1,9 +1,22 @@
+/* #region global */
+button {
+    border: 0;
+    padding: 0;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+    outline:0 !important;
+}
+ 
+/* #endregion */
 html, body {
     width: 100%;
     height: 100%;
     min-height: 100%;
-    min-width: 756px;
-    
+    min-width: 756px;    
 }
 
 body, .root-container { 
@@ -48,8 +61,53 @@ body, .root-container {
     height: 420px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 10px;
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
 }
 
+
+.field-button {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: #c6c6c6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-width: 1.5px;
+    border-left-width: 1.5px;
+    border-style: solid;
+    border-color: #808080;
+}
+
+.field-button.initial-state {
+    border-width: 3px;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+}
+
+.field-button.mine::before {
+    content: "\2620";
+    font-size: 20px;
+    font-weight: bold;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: -4px;
+    left: -1px;
+}
+
+.field-button.mine.red {
+    background-color:red;
+}
+
+.field-button.flag::before {
+    content: "\26F3";
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
