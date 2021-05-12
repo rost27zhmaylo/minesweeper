@@ -1,0 +1,1 @@
+This oroject is a clone https://minesweeper.online/
