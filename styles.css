@@ -78,11 +78,11 @@ body, .root-container {
 .game button {
     width: 24px;
     height: 24px;
+    background-size: 100%;
 }
 
 .game button.closed {
     background-image: url(./assets/closed.svg);
-    background-size: 100%;
 }
 
 .game button.mine::before {
