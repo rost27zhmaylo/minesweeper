@@ -16,10 +16,10 @@ html, body {
     width: 100%;
     height: 100%;
     min-height: 100%;
-    min-width: 756px;    
+    min-width: 756px;
 }
 
-body, .root-container { 
+body, .root-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,6 +53,7 @@ body, .root-container {
     box-shadow: blue 0 0 10px 5px;
     padding-left: auto;
 }
+
 /* #endregion */
 
 /* #region game container */
@@ -68,6 +69,15 @@ body, .root-container {
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
 }
+
+.game-container .game-interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    margin: 4.5px;
+}
+
 
 .game-container .game {
     display: grid;
@@ -85,24 +95,71 @@ body, .root-container {
     background-image: url(./assets/closed.svg);
 }
 
-.game button.mine::before {
-    content: "\2620";
-    height: 24px;
-    width: 24px;
-    font-size: 20px;
-    font-weight: bold;
+.game button.type1 {
+    background-image: url(./assets/type1.svg);
 }
 
-.game button.mine.red {
-    background-color: red;
+.game button.type2 {
+    background-image: url(./assets/type2.svg);
 }
 
-.game button.flag::before {
-    content: "\26F3";
-    height: 24px;
-    width: 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: red;
+.game button.type3 {
+    background-image: url(./assets/type3.svg);
+}
+
+.game button.type4 {
+    background-image: url(./assets/type4.svg);
+}
+
+.game button.type5 {
+    background-image: url(./assets/type5.svg);
+}
+
+.game button.type6 {
+    background-image: url(./assets/type6.svg);
+}
+
+.game button.type7 {
+    background-image: url(./assets/type7.svg);
+}
+
+.game button.type8 {
+    background-image: url(./assets/type8.svg);
+}
+
+.game-interface button.face {
+    width: 39px;
+    height: 39px;
+    background-size: 100%;
+}
+
+.game-interface button.face_unpressed {
+    background-image: url(./assets/face_unpressed.svg);
+}
+
+.game-interface button.face_lose {
+    background-image: url(./assets/face_lose.svg);
+}
+
+
+
+.game button.mine {
+    background-image: url(./assets/mine.svg);
+}
+
+.game button.mine_red {
+    background-image: url(./assets/mine_red.svg);
+}
+
+.game button.mine_wrong {
+    background-image: url(./assets/mine_wrong.svg);
+}
+
+.game button.flag {
+    background-image: url(./assets/flag.svg);
+}
+
+.game button.type0 {
+    background-image: url(./assets/type0.svg);
 }
 /* #endregion */
