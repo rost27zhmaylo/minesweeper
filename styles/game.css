@@ -1,0 +1,69 @@
+.game {
+    display: grid;
+    grid-template-columns: repeat(9, 24px);
+    grid-template-rows: repeat(9, 24px);
+}
+
+.game button {
+    width: 24px;
+    height: 24px;
+    background-size: 100%;
+}
+
+/* -- SVG AS BACKGROUND STYLES -- */
+
+.game button.closed {
+    background-image: url(../assets/closed.svg);
+}
+
+.game button.type0 {
+    background-image: url(../assets/type0.svg);
+}
+
+.game button.type1 {
+    background-image: url(../assets/type1.svg);
+}
+
+.game button.type2 {
+    background-image: url(../assets/type2.svg);
+}
+
+.game button.type3 {
+    background-image: url(../assets/type3.svg);
+}
+
+.game button.type4 {
+    background-image: url(../assets/type4.svg);
+}
+
+.game button.type5 {
+    background-image: url(../assets/type5.svg);
+}
+
+.game button.type6 {
+    background-image: url(../assets/type6.svg);
+}
+
+.game button.type7 {
+    background-image: url(../assets/type7.svg);
+}
+
+.game button.type8 {
+    background-image: url(../assets/type8.svg);
+}
+
+.game button.mine {
+    background-image: url(../assets/mine.svg);
+}
+
+.game button.mine-red {
+    background-image: url(../assets/mine_red.svg);
+}
+
+.game button.mine-wrong {
+    background-image: url(../assets/mine_wrong.svg);
+}
+
+.game button.flag {
+    background-image: url(../assets/flag.svg);
+}

@@ -4,117 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Сапер</title>
-    <link rel="stylesheet" href="styles.css"/>
+
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/menu.css"/>
+    <link rel="stylesheet" href="styles/hud.css"/>
+    <link rel="stylesheet" href="styles/game.css"/>
 </head>
 <body>
-<div class="root-container">
-    <div class="game-modes-container">
-        <button>Level 1</button>
-        <button>Level 2</button>
-        <button>Level 3</button>
+    <div class="minesweeper">
+        <section class="menu">
+            <button>Level 1</button>
+            <button>Level 2</button>
+            <button>Level 3</button>
+        </section>
+        <section class="game-container">
+            <div>
+                <div class="hud">
+                    <div class="score">123</div>
+                    <button class="face face-unpressed"></button>
+                    <div class="time">456</div>
+                </div>
+                <div class="game">
+                    <button class="type0"/>
+                    <button class="type1"/>
+                    <button class="type2"/>
+                    <button class="type3"/>
+                    <button class="type4"/>
+                    <button class="type5"/>
+                    <button class="type6"/>
+                    <button class="type7"/>
+                    <button class="type8"/>
+                    <button class="mine"/>
+                    <button class="mine-red"/>
+                    <button class="mine-wrong"/>
+                    <button class="flag"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                    <button class="closed"/>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="game-container">
-<div>
-    <div class="game-interface">
-        <div class="score">123</div>
-        <button class="face_lose face"></button>
-        <div class="time">456</div>
-    </div>
-    <div class="game">
-        <button class="type1"/>
-        <button class="type2"/>
-        <button class="type3"/>
-        <button class="mine"/>
-        <button class="mine_red"/>
-        <button class="mine_wrong"/>
-        <button class="flag"/>
-        <button class="type4"/>
-        <button class="type6"/>
-        <button class="type7"/>
-        <button class="type8"/>
-        <button class="closed"/>
-        <button class="type5"/>
-        <button class="type0"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-        <button class="closed"/>
-    </div>
-</div>
-    </div>
-</div>
 </body>
 </html>
