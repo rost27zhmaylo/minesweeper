@@ -1,12 +1,25 @@
+/* #region global */
+button {
+    border: 0;
+    padding: 0;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+    outline:0 !important;
+}
+/* #endregion */
+
 html, body {
     width: 100%;
     height: 100%;
     min-height: 100%;
     min-width: 756px;
-    
 }
 
-body, .root-container { 
+body, .root-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +41,7 @@ body, .root-container {
     background: #7d7a70;
     width: 100px;
     height: 30px;
-    font-family: 'Train One';
+    font-family: Train One, sans-serif;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     transition: 0.3s;
@@ -40,16 +53,113 @@ body, .root-container {
     box-shadow: blue 0 0 10px 5px;
     padding-left: auto;
 }
+
 /* #endregion */
 
+/* #region game container */
 .game-container {
-    background-color: #a39e90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 756px;
     height: 420px;
-    display: flex;
-    justify-content: center;
     border-radius: 10px;
+    background-color: #a39e90;
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
 }
 
+.game-container .game-interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    margin: 4.5px;
+}
+
+
+.game-container .game {
+    display: grid;
+    grid-template-columns: repeat(9, 24px);
+    grid-template-rows: repeat(9, 24px);
+}
+
+.game button {
+    width: 24px;
+    height: 24px;
+    background-size: 100%;
+}
+
+.game button.closed {
+    background-image: url(./assets/closed.svg);
+}
+
+.game button.type1 {
+    background-image: url(./assets/type1.svg);
+}
+
+.game button.type2 {
+    background-image: url(./assets/type2.svg);
+}
+
+.game button.type3 {
+    background-image: url(./assets/type3.svg);
+}
+
+.game button.type4 {
+    background-image: url(./assets/type4.svg);
+}
+
+.game button.type5 {
+    background-image: url(./assets/type5.svg);
+}
+
+.game button.type6 {
+    background-image: url(./assets/type6.svg);
+}
+
+.game button.type7 {
+    background-image: url(./assets/type7.svg);
+}
+
+.game button.type8 {
+    background-image: url(./assets/type8.svg);
+}
+
+.game-interface button.face {
+    width: 39px;
+    height: 39px;
+    background-size: 100%;
+}
+
+.game-interface button.face_unpressed {
+    background-image: url(./assets/face_unpressed.svg);
+}
+
+.game-interface button.face_lose {
+    background-image: url(./assets/face_lose.svg);
+}
+
+
+
+.game button.mine {
+    background-image: url(./assets/mine.svg);
+}
+
+.game button.mine_red {
+    background-image: url(./assets/mine_red.svg);
+}
+
+.game button.mine_wrong {
+    background-image: url(./assets/mine_wrong.svg);
+}
+
+.game button.flag {
+    background-image: url(./assets/flag.svg);
+}
+
+.game button.type0 {
+    background-image: url(./assets/type0.svg);
+}
+/* #endregion */
