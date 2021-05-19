@@ -1,0 +1,27 @@
+.hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+}
+
+.hud button.face {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+}
+
+/* -- SVG AS BACKGROUND STYLES -- */
+
+.hud button.face-unpressed {
+    background-image: url(../assets/face_unpressed.svg);
+}
+
+.hud button.face-unpressed:active {
+    background-image: url(../assets/face_pressed.svg);
+}
+
+.hud button.face-lose {
+    background-image: url(../assets/face_lose.svg);
+}
