@@ -7,9 +7,27 @@
     border: solid 5px #808080;
 }
 
-.hud button.face {
+.hud button {
     width: 40px;
     height: 40px;
+    background-size: 100%;
+}
+
+.hud .score,
+.hud .time {
+    background-color: black;
+    width: 58px;
+    height: 34px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 3px #808080;
+}
+
+.hud span,
+.hud span {
+    height: 31px;
+    width: 16px;
     background-size: 100%;
 }
 
