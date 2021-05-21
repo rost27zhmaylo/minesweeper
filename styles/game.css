@@ -39,7 +39,7 @@
 .game button.type5 {
     background-image: url(../assets/type5.svg);
 }
-
+/*//<editor-fold desc="МОЙ ТЕКСТ ОПИСАНИЕ">*/
 .game button.type6 {
     background-image: url(../assets/type6.svg);
 }
@@ -69,3 +69,4 @@
 
 
 }
+/*//</editor-fold>*/

@@ -7,6 +7,7 @@ button:active {
     border: 0;
     padding: 0;
     outline:0 !important;
+    margin-top: 0;
 }
 
 html, body {
@@ -27,6 +28,7 @@ body, .minesweeper {
 }
 
 .game-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,4 +39,65 @@ body, .minesweeper {
     background-color: #a39e90;
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
+
 }
+/*GMAE AND HUD CONTAINER BORDERS*/
+
+/*TOP*/
+.HUD-boreder-top {
+    background-image: url("../assets/border_hor_2x.png");
+    background-size: contain;
+    height: 13.7px;
+    width: 243.4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HUD-boreder-top-R-corner {
+    background-image: url("../assets/corner_up_right_2x.png");
+    background-size: contain;
+    width: 13.7px;
+    height: 13.7px;
+}
+
+.HUD-boreder-top-l-corner {
+    background-color: green;
+    width: 13.7px;
+    height: 13.7px;
+    background-image: url("../assets/corner_up_left_2x.png");
+    background-size: contain;
+}
+
+/*BOTOMN*/
+.HUD-boreder-bottomn {display: flex;
+    justify-content: space-between;
+    background-image: url("../assets/border_hor_2x.png");
+    background-size: contain;
+    height: 13.7px;
+    width: 243.4px;
+}
+
+.HUD-boreder-bottomn-R-corner {
+    background-color: green;
+    width: 13.7px;
+    height: 13.7px;
+    background-image: url("../assets/t_left_2x.png");
+    background-size: contain;
+}
+
+.HUD-boreder-bottomn-L-corner {
+    background-color: green;
+    width: 13.7px;
+    height: 13.7px;
+    background-size: contain;
+    background-image: url("../assets/t_right_2x.png");
+    background-size: contain;
+}
+
+
+/*LEFT*/
+/*.HUD-boreder-left {*/
+/*     background-color: green;*/
+/*     height: 50px;*/
+/*     width: 13.7px;*/
+/*}*/
