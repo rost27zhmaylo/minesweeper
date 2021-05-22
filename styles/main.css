@@ -34,7 +34,7 @@ body, .minesweeper {
     align-items: center;
     justify-content: center;
     width: 756px;
-    height: 420px;
+    height: 433.7px;
     border-radius: 10px;
     background-color: #a39e90;
     box-shadow: #63625d 10px 10px 10px 10px;
@@ -69,7 +69,8 @@ body, .minesweeper {
 }
 
 /*BOTOMN*/
-.HUD-boreder-bottomn {display: flex;
+.HUD-boreder-bottomn {
+    display: flex;
     justify-content: space-between;
     background-image: url("../assets/border_hor_2x.png");
     background-size: contain;
@@ -101,3 +102,27 @@ body, .minesweeper {
 /*     height: 50px;*/
 /*     width: 13.7px;*/
 /*}*/
+
+/*GAME CONTAINER BORDERS*/
+.GAME-border-bottomn {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../assets/border_hor_2x.png");
+    -webkit-transform:rotate(180de);
+    background-size: contain;
+    height: 13.7px;
+    width: 243.4px;
+    left: 30px;
+}
+
+.GAME-border-bottomn-L-corner {
+    background-image: url("../assets/corner_up_right_2x.png");
+    background-size: contain;
+
+    width: 13.7px;
+    height: 13.7px;
+}
+
+.GAME-border-bottomn-R-corner {
+
+}
