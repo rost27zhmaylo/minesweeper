@@ -90,21 +90,21 @@ body, .minesweeper {
     background-image: url("../assets/border_hor_2x.png");
     background-size: contain;
     height: 13.7px;
-    width: 243.4px;
+    width: 247px;
 }
 
 .HUD-boreder-bottomn-R-corner {
     background-color: green;
-    width: 13.7px;
-    height: 13.7px;
+    width: 14.75px;
+    height: 14.75px;
     background-image: url("../assets/t_left_2x.png");
     background-size: contain;
 }
 
 .HUD-boreder-bottomn-L-corner {
     background-color: green;
-    width: 13.7px;
-    height: 13.7px;
+    width: 15px;
+    height: 14.75px;
     background-size: contain;
     background-image: url("../assets/t_right_2x.png");
     background-size: contain;
