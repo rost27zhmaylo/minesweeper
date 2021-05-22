@@ -39,7 +39,6 @@ body, .minesweeper {
     background-color: #a39e90;
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
-
 }
 /*GMAE AND HUD CONTAINER BORDERS*/
 
@@ -66,6 +65,12 @@ body, .minesweeper {
     height: 13.7px;
     background-image: url("../assets/corner_up_left_2x.png");
     background-size: contain;
+}
+
+.HUD-boreder-left {
+    background-color: green;
+    height: 50px;
+    width: 13.7px;
 }
 
 /*BOTOMN*/
