@@ -1,1 +1,1 @@
-This oroject is a clone https://minesweeper.online/
+This project is a clone https://minesweeper.online/

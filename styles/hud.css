@@ -1,20 +1,28 @@
-.hud {
+.HUD-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
-    background-color: #c0c0c0;
-    border: solid 5px #808080;
+    background-color: silver;
 }
 
-.hud button {
+.HUD {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.HUD button {
     width: 40px;
     height: 40px;
     background-size: 100%;
 }
 
-.hud .score,
-.hud .time {
+.HUD .score,
+.HUD .time {
     background-color: black;
     width: 58px;
     height: 34px;
@@ -24,63 +32,65 @@
     border: solid 3px #808080;
 }
 
-.hud span,
-.hud span {
+.HUD span,
+.HUD span {
     height: 31px;
     width: 16px;
     background-size: 100%;
 }
 
-/* -- SVG AS BACKGROUND STYLES -- */
+/*//<editor-fold desc="SVG AS BACKGROUND STYLES">*/
 
-.hud button.face-unpressed {
+.HUD button.face-unpressed {
     background-image: url(../assets/face_unpressed.svg);
 }
 
-.hud button.face-unpressed:active {
+.HUD button.face-unpressed:active {
     background-image: url(../assets/face_pressed.svg);
 }
 
-.hud button.face-lose {
+.HUD button.face-lose {
     background-image: url(../assets/face_lose.svg);
 }
 
-.hud span.d0 {
+.HUD span.d0 {
     background-image: url(../assets/Numbers/d0.svg);
 }
 
-.hud span.d1 {
+.HUD span.d1 {
     background-image: url(../assets/Numbers/d1.svg);
 }
 
-.hud span.d2 {
+.HUD span.d2 {
     background-image: url(../assets/Numbers/d2.svg);
 }
 
-.hud span.d3 {
+.HUD span.d3 {
     background-image: url(../assets/Numbers/d3.svg);
 }
 
-.hud span.d4 {
+.HUD span.d4 {
     background-image: url(../assets/Numbers/d4.svg);
 }
 
-.hud span.d5 {
+.HUD span.d5 {
     background-image: url(../assets/Numbers/d5.svg);
 }
 
-.hud span.d6 {
+.HUD span.d6 {
     background-image: url(../assets/Numbers/d6.svg);
 }
 
-.hud span.d7 {
+.HUD span.d7 {
     background-image: url(../assets/Numbers/d7.svg);
 }
 
-.hud span.d8 {
+.HUD span.d8 {
     background-image: url(../assets/Numbers/d8.svg);
 }
 
-.hud span.d9 {
+.HUD span.d9 {
     background-image: url(../assets/Numbers/d9.svg);
 }
+
+/*//</editor-fold>*/

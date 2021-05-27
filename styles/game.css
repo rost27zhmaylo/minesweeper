@@ -1,7 +1,7 @@
 .game {
     display: grid;
-    grid-template-columns: repeat(9, 24px);
-    grid-template-rows: repeat(9, 24px);
+    grid-template-columns: repeat(30, 24px);
+    grid-template-rows: repeat(16, 24px);
 }
 
 .game button {
@@ -10,7 +10,7 @@
     background-size: 100%;
 }
 
-/* -- SVG AS BACKGROUND STYLES -- */
+/*//<editor-fold desc="SVG AS BACKGROUND STYLES">*/
 
 .game button.closed {
     background-image: url(../assets/closed.svg);
@@ -67,3 +67,5 @@
 .game button.flag {
     background-image: url(../assets/flag.svg);
 }
+
+/*//</editor-fold>*/
