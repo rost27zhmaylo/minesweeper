@@ -1,4 +1,4 @@
-/* -- GLOBAL STYLES -- */
+/*//<editor-fold desc="GLOBAL STYLES">*/
 
 :root {
     --scale: 0.7; /* 100% */
@@ -21,7 +21,9 @@ html, body {
     min-width: 756px;
 }
 
-/* -- GAME STYLES -- */
+/*//</editor-fold>*/
+
+/*//<editor-fold desc="GAME STYLES">*/
 
 body, .minesweeper {
     display: flex;
@@ -45,7 +47,10 @@ body, .minesweeper {
     box-shadow: #63625d 10px 10px 10px 10px;
     z-index: 1;
 }
-/*GMAE AND HUD CONTAINER BORDERS*/
+
+/*//</editor-fold>*/
+
+/*//<editor-fold desc="GAME AND HUD CONTAINER BORDERS">*/
 
 .buttons-container {
     display: flex;
@@ -59,8 +64,10 @@ body, .minesweeper {
     background-size: contain;
 }
 
+/*//</editor-fold>*/
 
-/*TOP*/
+/*//<editor-fold desc="TOP">*/
+
 .HUD-border-top {
     background-image: url("../assets/border_hor_2x.png");
     background-size: contain;
@@ -86,7 +93,10 @@ body, .minesweeper {
     height: 50px;
 }
 
-/*BOTOMN*/
+/*//</editor-fold>*/
+
+/*//<editor-fold desc="BOTTOM">*/
+
 .HUD-border-bottom {
     display: flex;
     justify-content: space-between;
@@ -110,23 +120,9 @@ body, .minesweeper {
     background-image: url("../assets/t_right_2x.png");
 }
 
-/*GAME CONTAINER BORDERS*/
-.GAME-border-bottomn {
-    display: flex;
-    justify-content: space-between;
-    background-image: url("../assets/border_hor_2x.png");
-    background-size: contain;
-    height: 13.7px;
-    width: 243.4px;
-    left: 30px;
-}
+/*//</editor-fold>*/
 
-.GAME-border-bottomn-L-corner {
-    background-image: url("../assets/corner_up_right_2x.png");
-    background-size: contain;
-    width: 13.7px;
-    height: 13.7px;
-}
+/*//<editor-fold desc="GAME CONTAINER BORDERS">*/
 
 .game-footer {
     background-image: url("../assets/border_hor_2x.png");
@@ -151,3 +147,5 @@ body, .minesweeper {
 .game-footer-R-corner {
     background-image: url(../assets/corner_bottom_right_2x.png);
 }
+
+/*//</editor-fold>*/

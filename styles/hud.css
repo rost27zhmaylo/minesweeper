@@ -39,7 +39,7 @@
     background-size: 100%;
 }
 
-/* -- SVG AS BACKGROUND STYLES -- */
+/*//<editor-fold desc="SVG AS BACKGROUND STYLES">*/
 
 .HUD button.face-unpressed {
     background-image: url(../assets/face_unpressed.svg);
@@ -92,3 +92,5 @@
 .HUD span.d9 {
     background-image: url(../assets/Numbers/d9.svg);
 }
+
+/*//</editor-fold>*/

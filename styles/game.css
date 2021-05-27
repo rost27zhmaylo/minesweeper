@@ -4,16 +4,13 @@
     grid-template-rows: repeat(16, 24px);
 }
 
-
-
-
 .game button {
     width: 24px;
     height: 24px;
     background-size: 100%;
 }
 
-/* -- SVG AS BACKGROUND STYLES -- */
+/*//<editor-fold desc="SVG AS BACKGROUND STYLES">*/
 
 .game button.closed {
     background-image: url(../assets/closed.svg);
@@ -42,7 +39,7 @@
 .game button.type5 {
     background-image: url(../assets/type5.svg);
 }
-/*//<editor-fold desc="МОЙ ТЕКСТ ОПИСАНИЕ">*/
+
 .game button.type6 {
     background-image: url(../assets/type6.svg);
 }
@@ -69,7 +66,6 @@
 
 .game button.flag {
     background-image: url(../assets/flag.svg);
-
-
 }
+
 /*//</editor-fold>*/
