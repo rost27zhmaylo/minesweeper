@@ -14,7 +14,8 @@ button:active {
     margin-top: 0;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     min-height: 100%;
@@ -25,7 +26,8 @@ html, body {
 
 /*//<editor-fold desc="GAME STYLES">*/
 
-body, .minesweeper {
+body,
+.minesweeper {
     display: flex;
     flex-direction: column;
     justify-content: center;

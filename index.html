@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Сапер</title>
+        <title>Сапер</title>
 
-    <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="stylesheet" href="styles/menu.css"/>
-    <link rel="stylesheet" href="styles/hud.css"/>
-    <link rel="stylesheet" href="styles/game.css"/>
-</head>
-<body>
-    <div class="minesweeper">
-        <section class="menu">
-            <button>Level 1</button>
-            <button>Level 2</button>
-            <button>Level 3</button>
-        </section>
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/hud.css" />
+        <link rel="stylesheet" href="styles/game.css" />
+    </head>
+    <body>
+        <div class="minesweeper">
+            <section class="menu">
+                <button>Level 1</button>
+                <button>Level 2</button>
+                <button>Level 3</button>
+            </section>
 
-        <section class="game-container">
-            <div>
-                <div class="HUD-border-top">
-                    <div class="HUD-border-top-L-corner"></div>
-                    <div class="HUD-border-top-R-corner"></div>
-                </div>
-
-                <div class="HUD-container">
-                    <div class="HUD-border-small"></div>
-                    <div class="HUD">
-                        <div class="score">
-                            <span class="d1"></span>
-                            <span class="d2"></span>
-                            <span class="d3"></span>
-                        </div>
-
-                        <button class="face-unpressed"></button>
-
-                        <div class="time">
-                            <span class="d4"></span>
-                            <span class="d5"></span>
-                            <span class="d6"></span>
-                        </div>
-                    </div>
-                    <div class="HUD-border-small"></div>
-                </div>
-
-                <div class="HUD-border-bottom">
-                    <div class="HUD-border-bottom-L-corner"></div>
-                    <div class="HUD-border-bottom-R-corner"></div>
-                </div>
-
-                <div class="buttons-container">
-                    <div class="game-border"></div>
-
-                    <div class="game">
-                        <button class="closed"/>
-                        <button class="type1"/>
-                        <button class="type2"/>
-                        <button class="type3"/>
-                        <button class="type4"/>
-                        <button class="type5"/>
-                        <button class="type6"/>
-                        <button class="type7"/>
-                        <button class="type8"/>
-                        <button class="mine"/>
-                        <button class="mine-red"/>
-                        <button class="mine-wrong"/>
-                        <button class="flag"/>
-                        <button class="type0"/>
+            <section class="game-container">
+                <div>
+                    <div class="HUD-border-top">
+                        <div class="HUD-border-top-L-corner"></div>
+                        <div class="HUD-border-top-R-corner"></div>
                     </div>
 
-                    <div class="game-border"></div>
-                </div>
+                    <div class="HUD-container">
+                        <div class="HUD-border-small"></div>
+                        <div class="HUD">
+                            <div class="score">
+                                <span class="d1"></span>
+                                <span class="d2"></span>
+                                <span class="d3"></span>
+                            </div>
 
-                <div class="game-footer">
-                    <div class="game-footer-L-corner"></div>
-                    <div class="game-footer-R-corner"></div>
+                            <button class="face-unpressed"></button>
+
+                            <div class="time">
+                                <span class="d4"></span>
+                                <span class="d5"></span>
+                                <span class="d6"></span>
+                            </div>
+                        </div>
+                        <div class="HUD-border-small"></div>
+                    </div>
+
+                    <div class="HUD-border-bottom">
+                        <div class="HUD-border-bottom-L-corner"></div>
+                        <div class="HUD-border-bottom-R-corner"></div>
+                    </div>
+
+                    <div class="buttons-container">
+                        <div class="game-border"></div>
+
+                        <div class="game">
+                            <button class="closed"></button>
+                            <button class="type1"></button>
+                            <button class="type2"></button>
+                            <button class="type3"></button>
+                            <button class="type4"></button>
+                            <button class="type5"></button>
+                            <button class="type6"></button>
+                            <button class="type7"></button>
+                            <button class="type8"></button>
+                            <button class="mine"></button>
+                            <button class="mine-red"></button>
+                            <button class="mine-wrong"></button>
+                            <button class="flag"></button>
+                            <button class="type0"></button>
+                        </div>
+
+                        <div class="game-border"></div>
+                    </div>
+
+                    <div class="game-footer">
+                        <div class="game-footer-L-corner"></div>
+                        <div class="game-footer-R-corner"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
-</body>
+            </section>
+        </div>
+
+        <script src="./javascript/test.js"></script>
+    </body>
 </html>
