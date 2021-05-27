@@ -77,13 +77,19 @@ body, .minesweeper {
     align-content: flex-end;
 }
 
+.HUD-border-top-L-corner,
+.HUD-border-top-R-corner {
+    background-size: cover;
+    width: calc(24px * var(--scale));
+    height: calc(22px * var(--scale));
+}
+
 .HUD-border-top-R-corner {
     background-image: url("../assets/corner_up_right_2x.png");
 }
 
 .HUD-border-top-L-corner {
     background-image: url("../assets/corner_up_left_2x.png");
-    background-size: contain;
 }
 
 .HUD-border-small {
