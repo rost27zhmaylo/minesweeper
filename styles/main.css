@@ -1,5 +1,9 @@
 /* -- GLOBAL STYLES -- */
 
+:root {
+    --scale: 0.7; /* 100% */
+}
+
 button,
 button:hover,
 button:focus,
@@ -34,8 +38,8 @@ body, .minesweeper {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 756px;
-    height: 433.7px;
+    min-width: 775px;
+    min-height: 500px;
     border-radius: 10px;
     background-color: #a39e90;
     box-shadow: #63625d 10px 10px 10px 10px;
@@ -49,88 +53,61 @@ body, .minesweeper {
     justify-content: center;
 }
 
-.game-left-border {
-    background-color: black;
-    width: 15px;
-    height: 240px;
+.game-border {
+    width: calc(24px * var(--scale));
     background-image: url(../assets/border_vert_2x.png);
     background-size: contain;
 }
 
-.game-right-border {
-    background-color: black;
-    width: 15px;
-    height: 240px;
-    background-image: url(../assets/border_vert_2x.png);
-    background-size: contain;
-}
 
 /*TOP*/
-.HUD-boreder-top {
+.HUD-border-top {
     background-image: url("../assets/border_hor_2x.png");
     background-size: contain;
-    height: 13.75px;
-    width: 246px;
+    height: calc(22px * var(--scale));
     display: flex;
     justify-content: space-between;
     align-content: flex-end;
 }
 
-.HUD-boreder-top-R-corner {
+.HUD-border-top-R-corner {
     background-image: url("../assets/corner_up_right_2x.png");
-    background-size: contain;
-    background-position: center;
-    width: 14px;
-    height: 13.75px;
 }
 
-.HUD-boreder-top-l-corner {
-    background-color: green;
-    width: 15px;
-    height: 14.75px;
+.HUD-border-top-L-corner {
     background-image: url("../assets/corner_up_left_2x.png");
     background-size: contain;
 }
 
-.HUD-boreder-right {
+.HUD-border-small {
     background-image: url(../assets/border_vert_2x.png);
     background-size: contain;
-    width: 15px;
-    height: 50px;
-}
-
-.HUD-boreder-left {
-    background-image: url(../assets/border_vert_2x.png);
-    background-size: contain;
-    width: 15px;
+    width: calc(24px * var(--scale));
     height: 50px;
 }
 
 /*BOTOMN*/
-.HUD-boreder-bottomn {
+.HUD-border-bottom {
     display: flex;
     justify-content: space-between;
     background-image: url("../assets/border_hor_2x.png");
     background-size: contain;
-    height: 14px;
-    width: 246px;
+    height: calc(22px * var(--scale));
 }
 
-.HUD-boreder-bottomn-R-corner {
-    background-color: green;
-    width: 15px;
-    height: 14px;
+.HUD-border-bottom-L-corner,
+.HUD-border-bottom-R-corner {
+    width: calc(24px * var(--scale));
+    height: calc(22px * var(--scale));
+    background-size: contain;
+}
+
+.HUD-border-bottom-L-corner {
     background-image: url("../assets/t_left_2x.png");
-    background-size: contain;
 }
 
-.HUD-boreder-bottomn-L-corner {
-    background-color: green;
-    width: 15px;
-    height: 14px;
-    background-size: contain;
+.HUD-border-bottom-R-corner {
     background-image: url("../assets/t_right_2x.png");
-    background-size: contain;
 }
 
 /*GAME CONTAINER BORDERS*/
@@ -147,28 +124,30 @@ body, .minesweeper {
 .GAME-border-bottomn-L-corner {
     background-image: url("../assets/corner_up_right_2x.png");
     background-size: contain;
-
     width: 13.7px;
     height: 13.7px;
 }
 
-.GAME-border-bottomn-R-corner {
-
-}
-
 .game-footer {
-    background-color: #504f4f;
-    width: 246px;
-    height: 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top: solid;
-    border-top-color: #808080;
-    transition: 1s;
-    transform-origin: top;
-   transform: translateZ(190px);
+    background-image: url("../assets/border_hor_2x.png");
+    background-size: contain;
+    height: calc(22px * var(--scale));
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
 }
 
-.game-footer:active {
-    transform: translateZ(0);
+.game-footer-R-corner,
+.game-footer-L-corner {
+    background-size: cover;
+    width: calc(24px * var(--scale));
+    height: calc(22px * var(--scale));
+}
+
+.game-footer-L-corner {
+    background-image: url(../assets/corner_bottom_left_2x.png);
+}
+
+.game-footer-R-corner {
+    background-image: url(../assets/corner_bottom_right_2x.png);
 }
