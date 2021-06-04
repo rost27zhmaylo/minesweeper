@@ -45,9 +45,7 @@ body,
     min-width: 775px;
     min-height: 500px;
     border-radius: 10px;
-    background-color: #a39e90;
-    box-shadow: #63625d 10px 10px 10px 10px;
-    z-index: 1;
+    background-color: #a7a0a0;
 }
 
 /*//</editor-fold>*/
@@ -157,3 +155,51 @@ body,
 }
 
 /*//</editor-fold>*/
+
+/*//<editor-fold desc="Test">*/
+
+.test {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    /*position: absolute;*/
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.test2 {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid green;
+    background-image: url(../assets/Backgrounds/icons8-unsplash-32.png);
+    background-size: contain;
+    left: 10px;
+    z-index: 1;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/Backgrounds/icons8-длинная-стрелка-влево-32.png);
+    background-size: cover;
+}
+
+.test_line {
+    background-color: green;
+    width: 150px;
+    height: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+    right: -5px;
+    transition: 1.5s;
+    transform-origin: right center;
+    transform: scaleX(0.1);
+}
+
+.test_line:hover {
+    transform: translateX(0%);
+}

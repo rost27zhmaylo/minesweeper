@@ -1,7 +1,5 @@
 .game {
     display: grid;
-    grid-template-columns: repeat(30, 24px);
-    grid-template-rows: repeat(16, 24px);
 }
 
 .game button {
