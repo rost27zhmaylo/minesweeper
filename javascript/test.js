@@ -1,6 +1,6 @@
 const generateGameField = (rows, columns) => {
     // проверка или валидация входящих параметров
-    if (rows > 16) rows = 16;
+    if (rows > 30) rows = 30;
     if (columns > 30) columns = 30;
 
     if (rows < 9) rows = 9;
@@ -33,4 +33,10 @@ const generateGameField = (rows, columns) => {
 };
 
 generateGameField(3, 3);
-document.getElementById("game-restart").addEventListener("click", () => generateGameField(16, 30));
+document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
+
+generateGameField(3, 3);
+document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
+
+generateGameField(3, 3);
+document.getElementById("level_three").addEventListener("click", () => generateGameField(16, 30));
