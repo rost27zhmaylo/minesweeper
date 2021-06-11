@@ -1,3 +1,4 @@
+
 const generateGameField = (rows, columns) => {
     // проверка или валидация входящих параметров
     if (rows > 30) rows = 30;
@@ -34,9 +35,26 @@ const generateGameField = (rows, columns) => {
 
 generateGameField(3, 3);
 document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
-
-generateGameField(3, 3);
 document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
-
-generateGameField(3, 3);
 document.getElementById("level_three").addEventListener("click", () => generateGameField(16, 30));
+
+/*
+-2. создать переменную в общем ящике которая будет хранить текущие размеры поля
+-1. Общий ящик это наш файл в котором мы пишем код = test.js файл
+0. каждый раз когда вызывается функ. generateGameField нам нужно сохранить размеры поля в переменную в общем ящике (ящик = scope) (переменная лежащая в общем ящике это глобальная переменная)
+1. Мне нужно повесить слушатель на клик события
+2. Этот слушатель должен вызвать функ. generateGameField
+3, функ. generateGameField нужно вызвать с правильными параметрами
+3/1 равильные параметры это предэдущий размер поля.
+ */
+
+// New
+
+// Привет Макс правильно ли я начинаю?
+
+const restartGameFieldRestart = (level_one, level_two, level_three) => {
+  const gameRestartButton = document.getElementById("game-restart");
+  level_one = (generateGameField(9, 9));
+}
+
+restartGameFieldButton(9, 9)
