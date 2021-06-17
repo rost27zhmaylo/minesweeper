@@ -5,7 +5,6 @@ let gameFieldRows;
 let gameFieldColumns;
 let isFirstClick = true;
 
-//  хочу поменять закрытую кнопку на открытую при клике на нее
 const generateGameField = (rows, columns) => {
     isFirstClick = true;
     timer.reset();
