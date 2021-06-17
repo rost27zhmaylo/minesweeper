@@ -1,4 +1,10 @@
+// нашли контейнер игрового поля
+const gameFieldContainer = document.getElementById("game-field");
 
+let gameFieldRows;
+let gameFieldColumns;
+
+//  хочу поменять закрытую кнопку на открытую при клике на нее
 const generateGameField = (rows, columns) => {
     // проверка или валидация входящих параметров
     if (rows > 30) rows = 30;
@@ -7,8 +13,9 @@ const generateGameField = (rows, columns) => {
     if (rows < 9) rows = 9;
     if (columns < 9) columns = 9;
 
-    // нашли контейнер игрового поля
-    const gameFieldContainer = document.getElementById("game-field");
+    // сохраняем игровые размеры игрового поля
+    gameFieldColumns = columns;
+    gameFieldRows = rows;
 
     // отчистим иговое поле
     gameFieldContainer.innerHTML = "";
@@ -33,28 +40,18 @@ const generateGameField = (rows, columns) => {
     gameFieldContainer.appendChild(fragment);
 };
 
+gameFieldContainer.addEventListener("click", event => {
+    if (event.target.classList.contains("closed")) {
+        event.target.classList.add("type0");
+        event.target.classList.remove("closed");
+    }
+});
+
 generateGameField(3, 3);
 document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
 document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
 document.getElementById("level_three").addEventListener("click", () => generateGameField(16, 30));
 
-/*
--2. создать переменную в общем ящике которая будет хранить текущие размеры поля
--1. Общий ящик это наш файл в котором мы пишем код = test.js файл
-0. каждый раз когда вызывается функ. generateGameField нам нужно сохранить размеры поля в переменную в общем ящике (ящик = scope) (переменная лежащая в общем ящике это глобальная переменная)
-1. Мне нужно повесить слушатель на клик события
-2. Этот слушатель должен вызвать функ. generateGameField
-3, функ. generateGameField нужно вызвать с правильными параметрами
-3/1 равильные параметры это предэдущий размер поля.
- */
-
-// New
-
-// Привет Макс правильно ли я начинаю?
-
-const restartGameFieldRestart = (level_one, level_two, level_three) => {
-  const gameRestartButton = document.getElementById("game-restart");
-  level_one = (generateGameField(9, 9));
-}
-
-restartGameFieldButton(9, 9)
+const gameRestartButton = document.getElementById("game-restart");
+const handleGameRestartButtonOnClick = () => generateGameField(gameFieldRows, gameFieldColumns);
+gameRestartButton.addEventListener("click", handleGameRestartButtonOnClick);
