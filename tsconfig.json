@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES5",
+        "module": "ESNext",
+        "moduleResolution": "Node"
+    },
+    "include": ["javascript"],
+    "exclude": ["node_modules", "MyStaff"]
+}
