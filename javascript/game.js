@@ -1,15 +1,18 @@
 // нашли контейнер игрового поля
 const gameFieldContainer = document.getElementById("game-field");
-
+const timer = createTimer();
 let gameFieldRows;
 let gameFieldColumns;
+let isFirstClick = true;
 
 //  хочу поменять закрытую кнопку на открытую при клике на нее
 const generateGameField = (rows, columns) => {
+    isFirstClick = true;
+    timer.reset();
+
     // проверка или валидация входящих параметров
     if (rows > 30) rows = 30;
     if (columns > 30) columns = 30;
-
     if (rows < 9) rows = 9;
     if (columns < 9) columns = 9;
 
@@ -41,6 +44,11 @@ const generateGameField = (rows, columns) => {
 };
 
 gameFieldContainer.addEventListener("click", event => {
+    if (isFirstClick === true) {
+        isFirstClick = false;
+        timer.start();
+    }
+
     if (event.target.classList.contains("closed")) {
         event.target.classList.add("type0");
         event.target.classList.remove("closed");
@@ -51,7 +59,6 @@ generateGameField(3, 3);
 document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
 document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
 document.getElementById("level_three").addEventListener("click", () => generateGameField(16, 30));
-
-const gameRestartButton = document.getElementById("game-restart");
-const handleGameRestartButtonOnClick = () => generateGameField(gameFieldRows, gameFieldColumns);
-gameRestartButton.addEventListener("click", handleGameRestartButtonOnClick);
+document
+    .getElementById("game-restart")
+    .addEventListener("click", () => generateGameField(gameFieldRows, gameFieldColumns));
