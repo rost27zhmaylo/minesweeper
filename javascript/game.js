@@ -54,6 +54,21 @@ gameFieldContainer.addEventListener("click", event => {
     }
 });
 
+// добавил слушатель события на правый клик мыши
+// при нажатии правой кнопки появляется флажок
+// убрал контекстное меню при нажатии на правую кнопку
+gameFieldContainer.addEventListener("contextmenu", event => {
+    event.preventDefault();
+    if (event.target.classList.contains("flag")) {
+        event.target.classList.add("mine");
+        event.target.classList.remove("flag");
+    }
+    if (event.target.classList.contains("closed")) {
+        event.target.classList.add("flag");
+        event.target.classList.remove("closed");
+    }
+});
+
 generateGameField(3, 3);
 document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
 document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
