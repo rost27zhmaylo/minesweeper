@@ -59,6 +59,7 @@ gameFieldContainer.addEventListener("click", event => {
 // убрал контекстное меню при нажатии на правую кнопку
 gameFieldContainer.addEventListener("contextmenu", event => {
     event.preventDefault();
+    timer.start();
     if (event.target.classList.contains("flag")) {
         event.target.classList.add("mine");
         event.target.classList.remove("flag");
