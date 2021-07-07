@@ -24,6 +24,7 @@ const createTimer = id => {
 
     const setTime = time => {
         // проверка или валидация входящих параметров
+        time = ~~time; // целая часть числа
         if (time < 0) time = 0;
         if (time > 999) time = 999;
 
@@ -57,7 +58,7 @@ const createTimer = id => {
             console.log("timer stop");
         },
         reset: () => {
-            setTime(7);
+            setTime(0);
         },
     };
 
