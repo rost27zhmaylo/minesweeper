@@ -18,7 +18,37 @@
  * конец игры
  * */
 
-const createTimer = () => {
+const createTimer = id => {
+    // найдем элемент в котором лежит таймер
+    const container = document.getElementById(id);
+
+    const setTime = time => {
+        // проверка или валидация входящих параметров
+        if (time < 0) time = 0;
+        if (time > 999) time = 999;
+
+        // сформируем трех значное значение Time
+        time = time.toString();
+        for (let step = time.length; step < 3; step++) {
+            time = `0${time}`;
+        }
+
+        // установим сформированное значение time
+        const fragment = document.createDocumentFragment();
+        for (let step = 1; step <= 3; step++) {
+            // создадим цифру времени
+            const span = document.createElement("span");
+            span.classList.add(`d${time[step - 1]}`);
+            fragment.appendChild(span);
+        }
+
+        // очистим таймер
+        container.innerHTML = "";
+
+        // добавим цифры в timer
+        container.appendChild(fragment);
+    };
+
     const timer = {
         start: () => {
             console.log("timer start");
@@ -27,7 +57,7 @@ const createTimer = () => {
             console.log("timer stop");
         },
         reset: () => {
-            console.log("timer reset");
+            setTime(7);
         },
     };
 

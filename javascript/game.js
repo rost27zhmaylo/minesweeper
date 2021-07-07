@@ -1,6 +1,6 @@
 // нашли контейнер игрового поля
 const gameFieldContainer = document.getElementById("game-field");
-const timer = createTimer();
+const timer = createTimer("timer");
 let gameFieldRows;
 let gameFieldColumns;
 let isFirstClick = true;
