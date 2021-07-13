@@ -19,6 +19,9 @@
  * */
 
 const createTimer = id => {
+    let currentTime = 0;
+    let timerInterval = null;
+
     // найдем элемент в котором лежит таймер
     const container = document.getElementById(id);
 
@@ -50,17 +53,37 @@ const createTimer = id => {
         container.appendChild(fragment);
     };
 
-    const timer = {
+    return {
         start: () => {
-            console.log("timer start");
+            if (timerInterval === null) {
+                timerInterval = setInterval(() => {
+                    currentTime++;
+                    setTime(currentTime);
+
+                    // Если таймер перевалил за 999, то нет смысла просить
+                    // браузер считать секунды, поэтому остановим таймер
+                    if (currentTime >= 999) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                    }
+                }, 1 * 1000);
+            }
         },
+
         stop: () => {
-            console.log("timer stop");
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
         },
+
         reset: () => {
             setTime(0);
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                currentTime = 0;
+            }
         },
     };
-
-    return timer;
 };

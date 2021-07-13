@@ -60,10 +60,12 @@ gameFieldContainer.addEventListener("click", event => {
 gameFieldContainer.addEventListener("contextmenu", event => {
     event.preventDefault();
     timer.start();
+
     if (event.target.classList.contains("flag")) {
         event.target.classList.add("mine");
         event.target.classList.remove("flag");
     }
+
     if (event.target.classList.contains("closed")) {
         event.target.classList.add("flag");
         event.target.classList.remove("closed");
