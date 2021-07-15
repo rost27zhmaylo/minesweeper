@@ -1,23 +1,32 @@
 // нашли контейнер игрового поля
 const gameFieldContainer = document.getElementById("game-field");
-const timer = createTimer("timer");
+const timer = createTimer();
+
 let gameFieldRows;
 let gameFieldColumns;
-let isFirstClick = true;
+let gameMinesAmount;
+let currentGameMinesAmount;
 
-const generateGameField = (rows, columns) => {
-    isFirstClick = true;
-    timer.reset();
-
+const generateGameField = (rows, columns, minesAmount) => {
     // проверка или валидация входящих параметров
     if (rows > 30) rows = 30;
     if (columns > 30) columns = 30;
+
     if (rows < 9) rows = 9;
     if (columns < 9) columns = 9;
+
+    const maxMinesAmount = rows * columns * 0.25;
+    if (minesAmount < 10) minesAmount = 10;
+    if (minesAmount > maxMinesAmount) minesAmount = maxMinesAmount;
 
     // сохраняем игровые размеры игрового поля
     gameFieldColumns = columns;
     gameFieldRows = rows;
+    gameMinesAmount = minesAmount;
+    currentGameMinesAmount = minesAmount;
+
+    timer.reset();
+    hudController.updateMinesAmount(minesAmount);
 
     // отчистим иговое поле
     gameFieldContainer.innerHTML = "";
@@ -43,10 +52,7 @@ const generateGameField = (rows, columns) => {
 };
 
 gameFieldContainer.addEventListener("click", event => {
-    if (isFirstClick === true) {
-        isFirstClick = false;
-        timer.start();
-    }
+    timer.start();
 
     if (event.target.classList.contains("closed")) {
         event.target.classList.add("type0");
@@ -62,20 +68,40 @@ gameFieldContainer.addEventListener("contextmenu", event => {
     timer.start();
 
     if (event.target.classList.contains("flag")) {
-        event.target.classList.add("mine");
+        event.target.classList.add("closed");
         event.target.classList.remove("flag");
+
+        currentGameMinesAmount++;
+        hudController.updateMinesAmount(currentGameMinesAmount);
+        return;
     }
 
     if (event.target.classList.contains("closed")) {
         event.target.classList.add("flag");
         event.target.classList.remove("closed");
+
+        currentGameMinesAmount--;
+        hudController.updateMinesAmount(currentGameMinesAmount);
+        return;
     }
 });
 
-generateGameField(3, 3);
-document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9));
-document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16));
-document.getElementById("level_three").addEventListener("click", () => generateGameField(16, 30));
+generateGameField(3, 3, 1);
+
+// Генерирует поле сложности "Новичек"
+document.getElementById("level_one").addEventListener("click", () => generateGameField(9, 9, 10));
+
+// Генерирует поле сложности "Любитель"
+document.getElementById("level_two").addEventListener("click", () => generateGameField(16, 16, 40));
+
+// Генерирует поле сложности "Эксперт"
+document
+    .getElementById("level_three")
+    .addEventListener("click", () => generateGameField(16, 30, 99));
+
+// Обработчик события перезапуска игры на том же уровне сложности
 document
     .getElementById("game-restart")
-    .addEventListener("click", () => generateGameField(gameFieldRows, gameFieldColumns));
+    .addEventListener("click", () =>
+        generateGameField(gameFieldRows, gameFieldColumns, gameMinesAmount),
+    );
