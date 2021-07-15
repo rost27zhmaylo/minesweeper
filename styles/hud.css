@@ -93,4 +93,7 @@
     background-image: url(../assets/Numbers/d9.svg);
 }
 
+.HUD span.minus {
+    background-image: url(../assets/d-.svg);
+}
 /*//</editor-fold>*/
